@@ -1,6 +1,6 @@
 /* Fonts */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700;500;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700;500;300;400&display=swap');
 /* common styles or utilities*/
 
 body {
@@ -33,9 +33,16 @@ body {
 	margin-bottom: 27px;
 }
 
-.top-section .transited-banner img {
+.transited-banner {
 	width: 556.01px;
 	height: 438px;
+	transition: width 2s, height 2s, transform 2s;
+}
+
+.header-container:hover .transited-banner {
+	width: 300px;
+	height: 300px;
+	transform: rotate(360deg);
 }
 
 .watch-link a {
@@ -63,10 +70,7 @@ main {
 --------------------------------*/
 
 .blog-container {
-	width: 1050px;
 	padding-top: 70px;
-	padding-right: 210px;
-	padding-left: 210px;
 }
 
 .blogs {
@@ -97,4 +101,40 @@ main {
 .details-info {
 	color: #6C6C6C;
 	font-weight: 300px
+}
+
+/* -----------------------------
+                Footer
+-------------------------------- */
+
+.footer-box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 158px;
+	margin-bottom: 63px;
+}
+
+.footer-item {
+	display: inline-flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.footer-icon {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-column-gap: 21.47px;
+	font-size: 32px;
+	/* background: #969BAB; */
+}
+
+.fab {
+	color: #969BAB;
+}
+
+.footer-copyright h4 {
+	color: #000000;
+	font-size: 18px;
+	font-weight: 400;
 }
