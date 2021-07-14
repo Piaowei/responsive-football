@@ -12,18 +12,16 @@ body {
 .header-container {
 	height: 677px;
 	background: #2D25A0;
+	/* display: flex;
+	justify-content: center;
+	align-items: center */
 }
 
 .top-section {
-	/* display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	grid-column-gap: 102px; */
-}
-
-.top-section {
-	padding-left: 156px;
-	padding-right: 140px;
+	display: flex;
+	align-items: center;
 	padding-top: 153px;
+	justify-content: space-around;
 }
 
 .top-heading-name {
@@ -148,35 +146,76 @@ main {
 
 @media only screen and (max-width:688px) {
 	/* Top Banner */
+	.top-section {
+		flex-direction: column;
+		align-items: flex-start;
+		padding-left: 24px;
+	}
 	.top-heading-name {
 		font-size: 36px;
 		line-height: 50px;
+	}
+	.section-title {
 		position: relative;
-		right: 140px;
-		width: 339px;
+		top: -50px;
 	}
 	.header-container:hover .transited-banner {
 		width: 100%;
-		height: 100%;
+		height: 95%;
 	}
 	.transited-banner {
-		/* width: 100%;
-		height: 100%; */
-		width: 329px;
-		height: 259.17px;
+		width: 100%;
+		height: 95%;
 	}
-	.top-section, .blogs {
+	.blogs {
 		grid-template-columns: repeat(1, 1fr);
 		grid-row-gap: 55px;
 	}
-	.top-section {
-		grid-column-gap: 2px;
-	}
-	.watch-link a {
-		position: relative;
-		right: 140px;
-	}
 	/* ----Footer----- */
+	.footer-box {
+		width: 100%;
+	}
+	.footer-logo img {
+		width: 70%;
+		position: relative;
+		left: 45px;
+	}
+	.blog-container {
+		padding-bottom: 43px;
+	}
+	.footer-item {
+		position: relative;
+		bottom: 162px;
+	}
+}
+
+/* --------------------------------
+               for Tab
+----------------------------- */
+
+@media only screen and (min-width:689px) and (max-width:992px) {
+	.blogs {
+		grid-template-columns: repeat(2, 1fr);
+		grid-row-gap: 55px;
+	}
+	.top-section {
+		/* flex-direction: column; */
+		align-items: flex-start;
+		padding-left: 24px;
+	}
+	.top-heading-name {
+		font-size: 36px;
+		line-height: 50px;
+	}
+	.header-container:hover .transited-banner {
+		width: 100%;
+		height: 95%;
+	}
+	.transited-banner {
+		width: 80%;
+		height: 80%;
+	}
+	/* ------------- For footer--------------- */
 	.footer-box {
 		width: 100%;
 	}
