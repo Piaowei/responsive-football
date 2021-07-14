@@ -9,12 +9,13 @@ body {
 	background: #FFFFFF;
 }
 
+/* ----------------------------
+            About Header
+--------------------------------*/
+
 .header-container {
 	height: 677px;
 	background: #2D25A0;
-	/* display: flex;
-	justify-content: center;
-	align-items: center */
 }
 
 .top-section {
@@ -102,6 +103,51 @@ main {
 	font-weight: 300px
 }
 
+/* ----------------------------
+            Top Rated
+--------------------------------*/
+
+.rated-container {
+	display: flex;
+}
+
+.container {
+	background-color: #FFFFFF;
+	Width: 870px;
+	padding: 30px;
+	margin-top: 21px;
+	border-radius: 5px;
+}
+
+.courses {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-column-gap: 23.61px;
+}
+
+.course .course-banner img {
+	width: 224px;
+	height: 104px;
+}
+
+.course-info {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.fa-star {
+	font-size: 12px;
+}
+
+.fa-star.filled {
+	color: #FFC014;
+}
+
+.fa-star.empty {
+	color: #AEAEAE;
+}
+
 /* -----------------------------
                 Footer
 -------------------------------- */
@@ -125,7 +171,6 @@ main {
 	grid-template-columns: repeat(5, 1fr);
 	grid-column-gap: 21.47px;
 	font-size: 32px;
-	/* background: #969BAB; */
 }
 
 .fab {
@@ -142,10 +187,13 @@ main {
 	font-weight: 400;
 }
 
+/* ----------------------------
+            About Responsivnes
+--------------------------------*/
+
 /* Mobile Device */
 
 @media only screen and (max-width:688px) {
-	/* Top Banner */
 	.top-section {
 		flex-direction: column;
 		align-items: flex-start;
@@ -171,6 +219,13 @@ main {
 		grid-template-columns: repeat(1, 1fr);
 		grid-row-gap: 55px;
 	}
+	/* Top Rated Matches */
+	.container {
+		width: 90%;
+	}
+	.courses {
+		grid-template-columns: repeat(1, 1fr);
+	}
 	/* ----Footer----- */
 	.footer-box {
 		width: 100%;
@@ -194,12 +249,20 @@ main {
 ----------------------------- */
 
 @media only screen and (min-width:689px) and (max-width:992px) {
+	/* for to rated matches */
+	.container {
+		width: 90%;
+	}
+	.courses {
+		grid-template-columns: repeat(2, 1fr);
+		padding: 20px;
+		margin-top: 23px;
+	}
 	.blogs {
 		grid-template-columns: repeat(2, 1fr);
 		grid-row-gap: 55px;
 	}
 	.top-section {
-		/* flex-direction: column; */
 		align-items: flex-start;
 		padding-left: 24px;
 	}
