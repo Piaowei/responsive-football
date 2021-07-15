@@ -103,12 +103,79 @@ main {
 	font-weight: 300px
 }
 
+/* ------------------------------------------------
+                 About  Photo Frame of Champions 
+--------------------------------------------------- */
+
+.container-stadium {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.stadium-info {
+	padding: 19px;
+}
+
+.photo-album {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+
+.photo-frame {
+	width: 300px;
+	height: 200px;
+	border: 2px solid goldenrod;
+	border-radius: 10px;
+	position: relative;
+	margin: 15px;
+	overflow: hidden;
+}
+
+.photo img {
+	width: 100%;
+	border-radius: 10px;
+}
+
+.photo-detail {
+	position: absolute;
+	width: 300px;
+	top: 0;
+}
+
+.photo-detail h3 {
+	background-color: black;
+	color: white;
+	text-align: center;
+}
+
+.photo-detail p {
+	color: white;
+}
+
+.container-stadium .photo-frame:hover .photo-detail {
+	background-color: rgba(199, 180, 134, 0.7);
+}
+
+.container-stadium .photo-frame:hover .photo {
+	transform: scale(1.5) skew(-30deg);
+	transition: transform 1s ease-in-out;
+}
+
 /* ----------------------------
             Top Rated
 --------------------------------*/
 
+#title-rating {
+	padding-left: 66px;
+}
+
 .rated-container {
 	display: flex;
+	justify-content: center
 }
 
 .container {
@@ -119,18 +186,18 @@ main {
 	border-radius: 5px;
 }
 
-.courses {
+.retings {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-column-gap: 23.61px;
 }
 
-.course .course-banner img {
+.reting .reting-banner img {
 	width: 224px;
 	height: 104px;
 }
 
-.course-info {
+.reting-info {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -187,11 +254,15 @@ main {
 	font-weight: 400;
 }
 
+.single-icon:hover a i {
+	color: #424141;
+}
+
 /* ----------------------------
             About Responsivnes
 --------------------------------*/
 
-/* Mobile Device */
+/*------- Mobile Device---------- */
 
 @media only screen and (max-width:688px) {
 	.top-section {
@@ -219,14 +290,18 @@ main {
 		grid-template-columns: repeat(1, 1fr);
 		grid-row-gap: 55px;
 	}
-	/* Top Rated Matches */
+	/* ------------Top Rated Matches----------------- */
 	.container {
 		width: 90%;
 	}
-	.courses {
+	.retings {
 		grid-template-columns: repeat(1, 1fr);
 	}
-	/* ----Footer----- */
+	#title-rating {
+		position: relative;
+		right: 12px;
+	}
+	/* -----------------Footer------------------------- */
 	.footer-box {
 		width: 100%;
 	}
@@ -246,17 +321,22 @@ main {
 
 /* --------------------------------
                for Tab
------------------------------ */
+---------------------------------- */
 
 @media only screen and (min-width:689px) and (max-width:992px) {
 	/* for to rated matches */
 	.container {
 		width: 90%;
 	}
-	.courses {
+	#title-rating {
+		position: relative;
+		left: 170px;
+	}
+	.retings {
 		grid-template-columns: repeat(2, 1fr);
 		padding: 20px;
 		margin-top: 23px;
+		display: flex;
 	}
 	.blogs {
 		grid-template-columns: repeat(2, 1fr);
